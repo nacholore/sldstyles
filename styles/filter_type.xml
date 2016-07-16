@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StyledLayerDescriptor version="1.0.0"
+  xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd"
+  xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc"
+  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<NamedLayer>
+		<Name>ap:point</Name>
+		<UserStyle>
+			<Title>Triangulo simple</Title>
+			<FeatureTypeStyle>
+				<Rule>
+					<Title>Punto de tipo 1</Title>
+					<Abstract>Representa un simple punto con un triangulo de color azul con borde negro para los puntos de tipo 1</Abstract>
+					<ogc:Filter>
+						<ogc:PropertyIsEqualTo>
+							<ogc:PropertyName>type</ogc:PropertyName>
+							<ogc:Literal>1</ogc:Literal>
+						</ogc:PropertyIsEqualTo>
+					</ogc:Filter>
+					<PointSymbolizer>
+						<Graphic>
+							<Mark>
+								<WellKnownName>square</WellKnownName>
+								<Fill>
+									<CssParameter name="fill">#FFF</CssParameter>
+								</Fill>
+								<Stroke>
+									<CssParameter name="stroke">#000000</CssParameter>
+									<CssParameter name="stroke-width">2</CssParameter>
+								</Stroke>
+							</Mark>
+							<Size>16</Size>
+						</Graphic>
+					</PointSymbolizer>
+				</Rule>
+				<Rule>
+					<Title>Punto de tipo 2</Title>
+					<Abstract>Representa con un flecha apuntando al norte de color verde para los puntos de tipo 2</Abstract>
+					<ogc:Filter>
+						<ogc:PropertyIsEqualTo>
+							<ogc:PropertyName>type</ogc:PropertyName>
+							<ogc:Literal>2</ogc:Literal>
+						</ogc:PropertyIsEqualTo>
+					</ogc:Filter>
+					<PointSymbolizer>
+						<Graphic>
+							<Mark>
+								<WellKnownName>cross</WellKnownName>
+								<Fill>
+									<CssParameter name="fill">#2AA93F</CssParameter>
+								</Fill>
+								<Stroke>
+									<CssParameter name="stroke">#000</CssParameter>
+									<CssParameter name="stroke-width">2</CssParameter>
+								</Stroke>
+							</Mark>
+							<Size>16</Size>
+						</Graphic>
+					</PointSymbolizer>
+				</Rule>
+				<Rule>
+					<Title>Punto de tipo 3</Title>
+					<Abstract>Representa un punto con un poligono generado utilizando un WKT para los elementos de tipo 3</Abstract>
+					<ogc:Filter>
+						<ogc:PropertyIsEqualTo>
+							<ogc:PropertyName>type</ogc:PropertyName>
+							<ogc:Literal>3</ogc:Literal>
+						</ogc:PropertyIsEqualTo>
+					</ogc:Filter>
+					<PointSymbolizer>
+						<Graphic>
+							<Mark>
+								<WellKnownName>wkt://POLYGON((-69.68000000000002103 44.43999999999999773,-47.12000000000000455 92.24000000000000909,-95.08000000000001251 97.95999999999999375,-34.20000000000004547 105.24000000000000909,-69.68000000000002103 44.43999999999999773))</WellKnownName>
+								<Fill>
+									<CssParameter name="fill">#FF3364</CssParameter>
+								</Fill>
+								<Stroke>
+									<CssParameter name="stroke">#000</CssParameter>
+									<CssParameter name="stroke-width">2</CssParameter>
+								</Stroke>
+							</Mark>
+							<Size>16</Size>
+						</Graphic>
+					</PointSymbolizer>
+				</Rule>
+			</FeatureTypeStyle>
+		</UserStyle>
+	</NamedLayer>
+</StyledLayerDescriptor>
